@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import streamlit as st
 
+print("KMeans imported successfully")
 # Judul aplikasi
 st.title('User Behavior Clustering')
 
