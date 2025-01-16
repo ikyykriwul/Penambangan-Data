@@ -1,10 +1,21 @@
+import subprocess
+import sys
+
+# Ensure scikit-learn is installed
+try:
+    import sklearn
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
+finally:
+    from sklearn.cluster import KMeans
+    from sklearn.preprocessing import StandardScaler
+
 import pandas as pd
 import numpy as np
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import streamlit as st
 
+print("KMeans imported successfully")
 # Judul aplikasi
 st.title('User Behavior Clustering')
 
